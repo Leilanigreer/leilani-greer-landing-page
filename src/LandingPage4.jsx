@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const LandingPage4 = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white p-8">
@@ -19,13 +21,17 @@ const LandingPage4 = () => {
           </p>
 
           <div className="flex gap-6">
-            <button className="group relative px-6 py-3 bg-purple-600 rounded-lg overflow-hidden">
-              <span className="relative z-10">View Work</span>
-              <div className="absolute inset-0 bg-purple-400 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-            </button>
-            <button className="px-6 py-3 border-2 border-purple-400 rounded-lg hover:bg-purple-400/10 transition-colors">
-              Contact
-            </button>
+            <Link to="/projects">
+              <button className="group relative px-6 py-3 bg-purple-600 rounded-lg overflow-hidden">
+                <span className="relative z-10">View Work</span>
+                <div className="absolute inset-0 bg-purple-400 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+              </button>
+            </Link>
+            <Link>
+              <button className="px-6 py-3 border-2 border-purple-400 rounded-lg hover:bg-purple-400/10 transition-colors">
+                Contact
+              </button>
+            </Link>
           </div>
         </div>
 
