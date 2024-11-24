@@ -3,8 +3,8 @@ import { SiGithub } from '@icons-pack/react-simple-icons';
 
 export function Projects() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-8">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-gray-900 text-gray-300">
+      <div className="max-w-6xl mx-auto p-8">
         {/* Header Section */}
         <div className="mb-12">
           <h1 className="text-5xl font-bold mb-4">
@@ -16,18 +16,40 @@ export function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="space-y-8">
+        <div className="space-y-16">
           {/* Get In Shape Project */}
-          <div className="bg-gray-800/50 rounded-2xl p-8 border border-gray-700 hover:border-purple-400/50 transition-colors duration-300">
-            <h2 className="text-3xl font-bold mb-4">
-              Get In Shape (G.I.S)
-              <span className="text-purple-400">.</span>
-            </h2>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Get In Shape (G.I.S) is a comprehensive fitness application built with React.js and Ruby on Rails, utilizing a PostgreSQL database and JWT authentication for secure user sessions. The interface features an intuitive filtering system where users can combine multiple criteria - exercise level, category, equipment, and primary muscles - with dedicated apply and reset filter buttons. The backend leverages PostgreSQL's array data type for efficient image path management, with exercise images served directly from the Rails application. The application presents over 870 exercises in a responsive card layout, each showcasing multiple navigable images, difficulty badges, exercise classifications (strength, stretching), equipment requirements, and target muscle groups. Users can explore detailed exercise information and, once authenticated, add exercises to personalized routines with specific rep and set counts. Key features include routine management with day-based filtering, exercise logging functionality, and the ability to track completed workouts with detailed notes. Deployed and hosted on Railway's cloud platform.
-            </p>
-            
-            <div className="flex flex-wrap gap-4 items-center">
+          <div className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700/50 hover:border-purple-400/50 transition-colors duration-300">
+            <div className='flex items-start gap-8 mb-8'>
+              <div className='flex-grow'>
+                <h2 className="text-3xl font-bold text-white">
+                  Get In Shape (G.I.S)
+                  <span className="text-purple-400">.</span>
+                </h2>
+              </div>
+              <div className="w-64 relative rounded-lg overflow-hidden flex-shrink-0 hover:scale-105 transition-transform duration-300 shadow-xl">
+                <img src="GIS_HomePage.png" alt="GIS Application Interface" className="w-full h-auto object-contain" />
+              </div>
+            </div>
+
+            <div className="flex gap-2 flex-wrap mb-4">
+              {['React.js', 'Ruby on Rails', 'PostgreSQL', 'JWT'].map((tech) => (
+                <span key={tech} className="px-3 py-1 bg-purple-400/10 text-purple-400 rounded-full text-sm">
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <div className="space-y-4 text-gray-300">
+              <p>
+                Get In Shape (G.I.S) is a comprehensive fitness application built with React.js and Ruby on Rails, utilizing a PostgreSQL database and JWT authentication for secure user sessions. The interface features an intuitive filtering system where users can combine multiple criteria - exercise level, category, equipment, and primary muscles - with dedicated apply and reset filter buttons. The backend leverages PostgreSQL's array data type for efficient image path management, with exercise images served directly from the Rails application.
+              </p>
+              <p>
+                The application presents over 870 exercises in a responsive card layout, each showcasing multiple navigable images, difficulty badges, exercise classifications (strength, stretching), equipment requirements, and target muscle groups. Users can explore detailed exercise information and, once authenticated, add exercises to personalized routines with specific rep and set counts. Key features include routine management with day-based filtering, exercise logging functionality, and the ability to track completed workouts with detailed notes. Deployed and hosted on Railway's cloud platform.
+              </p>
+            </div>
+
+
+            <div className="flex flex-wrap gap-4 items-center mt-8">
               <a 
                 href="https://gym-fitness-frontend-production.up.railway.app" 
                 target="_blank" 
