@@ -1,4 +1,5 @@
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { SiGithub } from '@icons-pack/react-simple-icons';
 
 export function Projects() {
   return (
@@ -33,7 +34,7 @@ export function Projects() {
                 rel="noopener noreferrer"
                 className="group relative px-6 py-3 bg-purple-600 rounded-lg overflow-hidden flex items-center gap-2"
               >
-                <span className="relative z-10">Bootstrap Live Version</span>
+                <span className="relative z-10">Bootstrap Live Demo</span>
                 <ExternalLink className="w-4 h-4 relative z-10" />
                 <div className="absolute inset-0 bg-purple-400 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </a>
@@ -44,7 +45,7 @@ export function Projects() {
                 rel="noopener noreferrer"
                 className="px-6 py-3 border-2 border-purple-400 rounded-lg hover:bg-purple-400/10 transition-colors flex items-center gap-2"
               >
-                <span>Tailwind Live Version</span>
+                <span>Tailwind Live Demo</span>
                 <ExternalLink className="w-4 h-4" />
               </a>
               
@@ -55,7 +56,7 @@ export function Projects() {
                 className="px-6 py-3 border-2 border-purple-400 rounded-lg hover:bg-purple-400/10 transition-colors flex items-center gap-2"
               >
                 <span>Tailwind GitHub</span>
-                <Github className="w-4 h-4" />
+                <SiGithub size={16} className="w-4 h-4" />
               </a>
               <a 
                 href="https://github.com/Leilanigreer/gym-fitness-frontend" 
@@ -64,7 +65,7 @@ export function Projects() {
                 className="px-6 py-3 border-2 border-purple-400 rounded-lg hover:bg-purple-400/10 transition-colors flex items-center gap-2"
               >
                 <span>Bootstrap GitHub</span>
-                <Github className="w-4 h-4" />
+                <SiGithub size={16} className="w-4 h-4" />
               </a>
               <a 
                 href="https://github.com/Leilanigreer/gym-fitness-api" 
@@ -73,7 +74,7 @@ export function Projects() {
                 className="px-6 py-3 border-2 border-purple-400 rounded-lg hover:bg-purple-400/10 transition-colors flex items-center gap-2"
               >
                 <span>Ruby on Rails GitHub</span>
-                <Github className="w-4 h-4" />
+                <SiGithub size={16} className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -107,7 +108,7 @@ export function Projects() {
                 className="px-6 py-3 border-2 border-purple-400 rounded-lg hover:bg-purple-400/10 transition-colors flex items-center gap-2"
               >
                 <span>React GitHub</span>
-                <Github className="w-4 h-4" />
+                <SiGithub size={16} className="w-4 h-4" />
               </a>
 
               <a 
@@ -117,7 +118,7 @@ export function Projects() {
                 className="px-6 py-3 border-2 border-purple-400 rounded-lg hover:bg-purple-400/10 transition-colors flex items-center gap-2"
               >
                 <span>Ruby on Rails GitHub</span>
-                <Github className="w-4 h-4" />
+                <SiGithub size={16} className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -140,7 +141,7 @@ export function Projects() {
                 className="px-6 py-3 border-2 border-purple-400 rounded-lg hover:bg-purple-400/10 transition-colors flex items-center gap-2"
               >
                 <span>GitHub</span>
-                <Github className="w-4 h-4" />
+                <SiGithub size={16} className="w-4 h-4" />
               </a>
             </div>
           </div>
