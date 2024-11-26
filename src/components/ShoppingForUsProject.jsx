@@ -2,24 +2,24 @@ import { ExternalLink } from 'lucide-react';
 import { SiGithub } from '@icons-pack/react-simple-icons';
 
 const ShoppingForUsProject = () => {
-  const technologies = ['React.js', 'Ruby on Rails', 'PostgreSQL', 'JWT', 'Redux', 'Active Storage'];
+  const technologies = ['React.js', 'Ruby on Rails', 'PostgreSQL', 'JWT'];
   
   const links = {
     live: [
       {
-        href: "#",
+        href: "https://shopping-4-us-tailwind-production.up.railway.app/",
         text: "Live Demo",
         icon: <ExternalLink className="w-4 h-4 relative z-10" />
       }
     ],
     github: [
       {
-        href: "#",
+        href: "https://github.com/Leilanigreer/shopping-4-us-tailwind",
         text: "React GitHub",
         icon: <SiGithub size={16} className="w-4 h-4" />
       },
       {
-        href: "#",
+        href: "https://github.com/Leilanigreer/shopping-4-us-api",
         text: "Ruby on Rails GitHub",
         icon: <SiGithub size={16} className="w-4 h-4" />
       }
@@ -31,7 +31,7 @@ const ShoppingForUsProject = () => {
       <div className="flex justify-between gap-8 mb-6">
         <div>
           <h2 className="text-3xl font-bold text-white mb-3">
-            Shopping For Us
+            Shopping 4 Us
             <span className="text-purple-400">.</span>
           </h2>
 
@@ -52,14 +52,14 @@ const ShoppingForUsProject = () => {
         <div className="flex gap-4">
           <div className="w-48 rounded-lg overflow-hidden flex-shrink-0 hover:scale-105 transition-transform duration-300 shadow-xl">
             <img 
-              src="/api/placeholder/400/320" 
+              src="S4U_HomePage.png" 
               alt="Shopping For Us Homepage" 
               className="w-full h-auto object-cover" 
             />
           </div>
           <div className="w-48 rounded-lg overflow-hidden flex-shrink-0 hover:scale-105 transition-transform duration-300 shadow-xl">
             <img 
-              src="/api/placeholder/400/320" 
+              src="S4U_ProductsPage.png" 
               alt="Shopping For Us Product Page" 
               className="w-full h-auto object-cover" 
             />
@@ -73,7 +73,7 @@ const ShoppingForUsProject = () => {
           An e-commerce platform built with React.js frontend and Ruby on Rails backend, backed by a PostgreSQL database and secured with JWT authentication. Developed independently over three weeks, the application implements responsive design principles and cross-browser compatibility. Core technologies include Redux for state management, Active Storage for image handling, and Action Mailer for order notifications. The application features a product browsing system, shopping cart functionality, and order history tracking.
         </p>
         <p>
-          The admin dashboard enables product management, including CRUD operations for inventory items. Notable features include vendor relationship management and product image handling. Performance optimizations include image lazy loading and database query optimization. While designed as a demonstration, the platform implements complete e-commerce workflows without actual payment processing. Fully deployed on Railway's infrastructure.
+          The admin dashboard enables product management, including CRUD operations for inventory items. Notable features include vendor relationship management and product image handling. Performance optimizations include image lazy loading and database query optimization. While designed as a demonstration, the platform implements complete e-commerce workflows without actual payment processing. Fully deployed on Railway&apos;s infrastructure.
         </p>
       </div>
 

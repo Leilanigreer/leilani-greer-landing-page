@@ -19,13 +19,13 @@ const GISProject = () => {
     ],
     github: [
       {
-        href: "https://github.com/Leilanigreer/gym-fitness-frontend-tailwind",
-        text: "Tailwind GitHub",
+        href: "https://github.com/Leilanigreer/gym-fitness-frontend",
+        text: "Bootstrap GitHub",
         icon: <SiGithub size={16} className="w-4 h-4" />
       },
       {
-        href: "https://github.com/Leilanigreer/gym-fitness-frontend",
-        text: "Bootstrap GitHub",
+        href: "https://github.com/Leilanigreer/gym-fitness-frontend-tailwind",
+        text: "Tailwind GitHub",
         icon: <SiGithub size={16} className="w-4 h-4" />
       },
       {
@@ -80,10 +80,10 @@ const GISProject = () => {
       {/* Project Description */}
       <div className="text-gray-300 space-y-3 max-w-[90ch]">
         <p>
-          Get In Shape (G.I.S) is a comprehensive fitness application built with React.js and Ruby on Rails, utilizing a PostgreSQL database and JWT authentication for secure user sessions. The interface features an intuitive filtering system where users can combine multiple criteria - exercise level, category, equipment, and primary muscles - with dedicated apply and reset filter buttons. The backend leverages PostgreSQL's array data type for efficient image path management, with exercise images served directly from the Rails application.
+          Get In Shape (G.I.S) is a comprehensive fitness application built with React.js and Ruby on Rails, utilizing a PostgreSQL database and JWT authentication for secure user sessions. The interface features an intuitive filtering system where users can combine multiple criteria - exercise level, category, equipment, and primary muscles - with dedicated apply and reset filter buttons. The backend leverages PostgreSQL&apos;s array data type for efficient image path management, with exercise images served directly from the Rails application.
         </p>
         <p>
-          The application presents over 870 exercises in a responsive card layout, each showcasing multiple navigable images, difficulty badges, exercise classifications (strength, stretching), equipment requirements, and target muscle groups. Users can explore detailed exercise information and, once authenticated, add exercises to personalized routines with specific rep and set counts. Key features include routine management with day-based filtering, exercise logging functionality, and the ability to track completed workouts with detailed notes. Deployed and hosted on Railway's cloud platform.
+          The application presents over 870 exercises in a responsive card layout, each showcasing multiple navigable images, difficulty badges, exercise classifications (strength, stretching), equipment requirements, and target muscle groups. Users can explore detailed exercise information and, once authenticated, add exercises to personalized routines with specific rep and set counts. Key features include routine management with day-based filtering, exercise logging functionality, and the ability to track completed workouts with detailed notes. Deployed and hosted on Railway&apos;s cloud platform.
         </p>
       </div>
 
