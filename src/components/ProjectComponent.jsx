@@ -1,6 +1,4 @@
-import { ExternalLink } from 'lucide-react';
-import { SiGithub } from '@icons-pack/react-simple-icons';
-import { PlayCircle } from 'lucide-react';
+import { FaExternalLinkAlt, FaPlayCircle, FaGithub } from "react-icons/fa";
 
 const ProjectComponent = ({ 
   title, 
@@ -59,7 +57,7 @@ const ProjectComponent = ({
               onClick={media.content.onPlay}
               className="flex items-center gap-3 text-purple-400 hover:text-purple-300 transition-colors"
             >
-              <PlayCircle className="w-12 h-12 sm:w-16 sm:h-16" />
+              <FaPlayCircle className="w-12 h-12 sm:w-16 sm:h-16" />
               <span className="text-base sm:text-lg">Watch Video Walkthrough</span>
             </button>
           </div>
@@ -88,7 +86,7 @@ const ProjectComponent = ({
                   className="group relative flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-lg bg-purple-600 overflow-hidden text-sm sm:text-base"
                 >
                   <span className="relative z-10">{link.text}</span>
-                  <ExternalLink className="w-4 h-4 relative z-10" />
+                  <FaExternalLinkAlt className="w-4 h-4 relative z-10" />
                   <div className="absolute inset-0 bg-purple-400 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                 </a>
               ))}
@@ -108,7 +106,7 @@ const ProjectComponent = ({
               className="flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-lg border-2 border-purple-400 hover:bg-purple-400/10 transition-colors text-sm sm:text-base"
             >
               <span>{link.text}</span>
-              <SiGithub size={16} className="w-4 h-4" />
+              <FaGithub size={16} className="w-4 h-4" />
             </a>
           ))}
         </div>

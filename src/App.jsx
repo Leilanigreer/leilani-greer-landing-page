@@ -6,6 +6,8 @@ import { Projects } from "./Projects";
 import LandingPage2 from "./LandingPage2";
 import LandingPage from "./LandingPage";
 import LandingPage5 from "./LandingPage5";
+import AboutMe from "./components/AboutMe";
+import AboutMe2 from "./components/AboutMe";
 
 
 const router = createBrowserRouter([
@@ -33,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/5",
         element: <LandingPage5 />,
+      },
+      {
+        path: "/AboutMe",
+        element: <AboutMe />,
       },
       {
         path: "/projects",

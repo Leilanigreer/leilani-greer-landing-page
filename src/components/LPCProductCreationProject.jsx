@@ -1,5 +1,5 @@
 import ProjectComponent from './ProjectComponent';
-import { SiGithub } from '@icons-pack/react-simple-icons';
+import { FaGithub } from "react-icons/fa";
 
 const LPCProductCreationProject = () => {
   const projectData = {
@@ -31,7 +31,7 @@ const LPCProductCreationProject = () => {
         {
           href: "https://github.com/Leilanigreer/lpc-product-manager",
           text: "GitHub",
-          icon: <SiGithub size={16} className="w-4 h-4" />
+          icon: <FaGithub size={16} className="w-4 h-4" />
         }
       ]
     }

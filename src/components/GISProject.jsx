@@ -1,7 +1,6 @@
 // src/components/GISProject.jsx
 import ProjectComponent from './ProjectComponent';
-import { ExternalLink } from 'lucide-react';
-import { SiGithub } from '@icons-pack/react-simple-icons';
+import {FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 const GISProject = () => {
   const projectData = {
@@ -29,29 +28,29 @@ const GISProject = () => {
         {
           href: "https://gym-fitness-frontend-production.up.railway.app",
           text: "Bootstrap Live Demo",
-          icon: <ExternalLink className="w-4 h-4 relative z-10" />
+          icon: <FaExternalLinkAlt className="w-4 h-4 relative z-10" />
         },
         {
           href: "https://gym-fitness-frontend-tailwind-production.up.railway.app/",
           text: "Tailwind Live Demo",
-          icon: <ExternalLink className="w-4 h-4 relative z-10" />
+          icon: <FaExternalLinkAlt className="w-4 h-4 relative z-10" />
         }
       ],
       github: [
         {
           href: "https://github.com/Leilanigreer/gym-fitness-frontend",
           text: "Bootstrap GitHub",
-          icon: <SiGithub size={16} className="w-4 h-4" />
+          icon: <FaGithub size={16} className="w-4 h-4" />
         },
         {
           href: "https://github.com/Leilanigreer/gym-fitness-frontend-tailwind",
           text: "Tailwind GitHub",
-          icon: <SiGithub size={16} className="w-4 h-4" />
+          icon: <FaGithub size={16} className="w-4 h-4" />
         },
         {
           href: "https://github.com/Leilanigreer/gym-fitness-api",
           text: "Ruby on Rails GitHub",
-          icon: <SiGithub size={16} className="w-4 h-4" />
+          icon: <FaGithub size={16} className="w-4 h-4" />
         }
       ]
     }

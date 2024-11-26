@@ -1,7 +1,6 @@
 // src/components/ShoppingForUsProject.jsx
 import ProjectComponent from './ProjectComponent';
-import { ExternalLink } from 'lucide-react';
-import { SiGithub } from '@icons-pack/react-simple-icons';
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 const ShoppingForUsProject = () => {
   const projectData = {
@@ -29,19 +28,19 @@ const ShoppingForUsProject = () => {
         {
           href: "https://shopping-4-us-tailwind-production.up.railway.app/",
           text: "Live Demo",
-          icon: <ExternalLink className="w-4 h-4 relative z-10" />
+          icon: <FaExternalLinkAlt className="w-4 h-4 relative z-10" />
         }
       ],
       github: [
         {
           href: "https://github.com/Leilanigreer/shopping-4-us-tailwind",
           text: "React GitHub",
-          icon: <SiGithub size={16} className="w-4 h-4" />
+          icon: <FaGithub size={16} className="w-4 h-4" />
         },
         {
           href: "https://github.com/Leilanigreer/shopping-4-us-api",
           text: "Ruby on Rails GitHub",
-          icon: <SiGithub size={16} className="w-4 h-4" />
+          icon: <FaGithub size={16} className="w-4 h-4" />
         }
       ]
     }
