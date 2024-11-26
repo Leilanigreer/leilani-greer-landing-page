@@ -1,3 +1,5 @@
+// src/Projects.jsx
+
 import GISProject from './components/GISProject';
 import ShoppingForUsProject from './components/ShoppingForUsProject';
 import LPCProductCreationProject from './components/LPCProductCreationProject';
