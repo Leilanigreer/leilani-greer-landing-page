@@ -1,18 +1,52 @@
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export function Header() {
+  const location = useLocation();
+  
   return (
-    <header className="bg-violet-400 p-4">
-      <nav>
-        <div className="flex gap-4 justify-center">
-          <Link to="/" className="text-white hover:text-violet-900"> Home Page</Link>
-          <Link to="/2" className="text-white hover:text-violet-900"> Home Page 2</Link>
-          <Link to="/4" className="text-white hover:text-violet-900"> Home Page 4</Link>
-          <Link to="/5" className="text-white hover:text-violet-900"> Home Page 5</Link>
-          <Link to="/" className="text-white hover:text-violet-900"> About Me</Link>
-          <Link to="/projects" className="text-white hover:text-violet-900"> Projects</Link>
+    <header className="bg-violet-500 py-3 px-6 transition-colors duration-300">
+      <nav className="max-w-7xl mx-auto">
+        <div className="flex justify-between items-center">
+          <motion.span 
+            whileHover={{ scale: 1.10 }}
+            transition={{ duration: 0.2 }}
+            className="text-white font-bold text-2xl cursor-pointer"
+          >
+            L.
+          </motion.span>
+          <div className="flex gap-8">
+            {["Home Page", "About Me", "Projects"].map((item) => (
+              <motion.div
+                key={item}
+                whileHover={{ y: -2 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Link
+                  to={item === "Home Page" ? "/" : `/${item.toLowerCase().replace(" ", "")}`}
+                  className="relative px-2 py-1"
+                >
+                  <span className={`text-sm transition-colors duration-300 ${
+                    location.pathname === (item === "Home Page" ? "/" : `/${item.toLowerCase().replace(" ", "")}`)
+                      ? "text-white font-medium"
+                      : "text-white/90 hover:text-white"
+                  }`}>
+                    {item}
+                  </span>
+                  {location.pathname === (item === "Home Page" ? "/" : `/${item.toLowerCase().replace(" ", "")}`) && (
+                    <motion.div
+                      layoutId="background"
+                      className="absolute inset-0 bg-white/20 rounded-lg shadow-sm"
+                    />
+                  )}
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </nav>
     </header>
-  )
+  );
 }
+
+export default Header;

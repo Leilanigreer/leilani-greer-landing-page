@@ -1,10 +1,10 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
-import LandingPage from "./LandingPage";
+import LandingPageOriginal from "./LandingPageOriginal";
 import { Projects } from "./Projects";
 import LandingPage2 from "./LandingPage2";
-import LandingPage4 from "./LandingPage4";
+import LandingPage from "./LandingPage";
 import LandingPage5 from "./LandingPage5";
 
 
@@ -23,12 +23,12 @@ const router = createBrowserRouter([
         element: <LandingPage />,
       },
       {
-        path: "/2",
-        element: <LandingPage2 />,
+        path: "/original",
+        element: <LandingPageOriginal />,
       },
       {
-        path: "/4",
-        element: <LandingPage4 />,
+        path: "/2",
+        element: <LandingPage2 />,
       },
       {
         path: "/5",
