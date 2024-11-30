@@ -13,17 +13,19 @@ export function Header() {
             transition={{ duration: 0.2 }}
             className="text-white font-bold text-2xl cursor-pointer"
           >
+            <Link to="/">
             L.
+            </Link>
           </motion.span>
           <div className="flex gap-8">
-            {["Home Page", "About Me", "Projects"].map((item) => (
+            {["Home", "Projects", "About Me", "Connect"].map((item) => (
               <motion.div
                 key={item}
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
               >
                 <Link
-                  to={item === "Home Page" ? "/" : `/${item.toLowerCase().replace(" ", "")}`}
+                  to={item === "Home" ? "/" : `/${item.toLowerCase().replace(" ", "")}`}
                   className="relative px-2 py-1"
                 >
                   <span className={`text-sm transition-colors duration-300 ${
@@ -33,7 +35,7 @@ export function Header() {
                   }`}>
                     {item}
                   </span>
-                  {location.pathname === (item === "Home Page" ? "/" : `/${item.toLowerCase().replace(" ", "")}`) && (
+                  {location.pathname === (item === "Home" ? "/" : `/${item.toLowerCase().replace(" ", "")}`) && (
                     <motion.div
                       layoutId="background"
                       className="absolute inset-0 bg-white/20 rounded-lg shadow-sm"
