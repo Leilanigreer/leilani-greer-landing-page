@@ -10,7 +10,7 @@ export function Projects() {
       <div className="max-w-6xl mx-auto p-8">
         <div className="mb-12">
           <h1 className="text-5xl font-bold mb-4">
-            Projects<span className="text-purple-400">.</span>
+            Projects<span className="text-violet-500">.</span>
           </h1>
           <p className="text-xl text-gray-400">
             A collection of my recent work and contributions

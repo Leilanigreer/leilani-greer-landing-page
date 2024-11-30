@@ -3,7 +3,8 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Projects } from "./Projects";
 import LandingPage from "./LandingPage";
-import AboutMe from "./components/AboutMe";
+import AboutMe from "./AboutMe";
+import { Connect } from "./Connect";
 
 
 const router = createBrowserRouter([
@@ -21,13 +22,17 @@ const router = createBrowserRouter([
         element: <LandingPage />,
       },
       {
-        path: "/AboutMe",
+        path: "/projects",
+        element: <Projects />,
+      },
+      {
+        path: "/aboutme",
         element: <AboutMe />,
       },
       {
-        path: "/projects",
-        element: <Projects />,
-      }
+        path: "/connect",
+        element: <Connect />,
+      },
     ]
   }
 ]);

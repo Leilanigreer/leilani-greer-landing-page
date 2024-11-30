@@ -14,10 +14,6 @@ const GISProject = () => {
       type: 'images',
       content: [
         {
-          src: "GIS_HomePage.png",
-          alt: "GIS Application Interface"
-        },
-        {
           src: "GIS_ExercisePage.png",
           alt: "GIS Exercise Page"
         }
@@ -26,25 +22,25 @@ const GISProject = () => {
     links: {
       live: [
         {
+          href: "https://gym-fitness-frontend-tailwind-production.up.railway.app/",
+          text: "Tailwind Live Demo",
+          icon: <FaExternalLinkAlt className="w-4 h-4 relative z-10" />
+        },
+        {
           href: "https://gym-fitness-frontend-production.up.railway.app",
           text: "Bootstrap Live Demo",
           icon: <FaExternalLinkAlt className="w-4 h-4 relative z-10" />
         },
-        {
-          href: "https://gym-fitness-frontend-tailwind-production.up.railway.app/",
-          text: "Tailwind Live Demo",
-          icon: <FaExternalLinkAlt className="w-4 h-4 relative z-10" />
-        }
       ],
       github: [
         {
-          href: "https://github.com/Leilanigreer/gym-fitness-frontend",
-          text: "Bootstrap GitHub",
+          href: "https://github.com/Leilanigreer/gym-fitness-frontend-tailwind",
+          text: "Tailwind GitHub",
           icon: <FaGithub size={16} className="w-4 h-4" />
         },
         {
-          href: "https://github.com/Leilanigreer/gym-fitness-frontend-tailwind",
-          text: "Tailwind GitHub",
+          href: "https://github.com/Leilanigreer/gym-fitness-frontend",
+          text: "Bootstrap GitHub",
           icon: <FaGithub size={16} className="w-4 h-4" />
         },
         {

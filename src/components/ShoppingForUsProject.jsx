@@ -14,10 +14,6 @@ const ShoppingForUsProject = () => {
       type: 'images',
       content: [
         {
-          src: "S4U_HomePage.png", 
-          alt: "Shopping For Us Homepage" 
-        }, 
-        {
           src: "S4U_ProductsPage.png", 
           alt: "Shopping For Us Product Page" 
         }

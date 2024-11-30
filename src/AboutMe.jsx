@@ -1,7 +1,3 @@
-import { MdEmail } from "react-icons/md";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-
-
 const AboutMe = () => {
   const skills = {
     languages: [
@@ -79,7 +75,7 @@ const AboutMe = () => {
         {/* Header Section */}
         <div className="mb-12">
           <h1 className="text-5xl font-bold mb-4">
-            About Me<span className="text-purple-400">.</span>
+            About Me<span className="text-violet-500">.</span>
           </h1>
           <p className="text-xl text-gray-400">
             Solutions-Driven Software Engineer with expertise in Software Development, Data Management, & Automation
@@ -91,7 +87,7 @@ const AboutMe = () => {
           {/* Introduction Section */}
           <section>
             <h2 className="text-3xl font-bold mb-6 text-white">
-              Hello, I'm Leilani<span className="text-purple-400">!</span>
+              Hello, I'm Leilani<span className="text-violet-500">!</span>
             </h2>
             <div className="prose prose-invert max-w-none space-y-4">
             {/* [Introduction paragraph: Write about who you are, your passion for development,
@@ -115,18 +111,18 @@ const AboutMe = () => {
           {/* Skills Section */}
           <section>
             <h2 className="text-3xl font-bold mb-6 text-white">
-              Technical Skills<span className="text-purple-400">.</span>
+              Technical Skills<span className="text-violet-500">.</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {Object.entries(skills).map(([category, skillList]) => (
                 <div key={category} className="bg-gray-800/30 rounded-xl p-6 border border-gray-700/50">
-                  <h3 className="text-xl font-semibold mb-4 text-purple-400 capitalize">
+                  <h3 className="text-xl font-semibold mb-4 text-violet-500 capitalize">
                     {category}
                   </h3>
                   <ul className="space-y-2">
                     {skillList.map((skill) => (
                       <li key={skill} className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                        <span className="w-2 h-2 bg-violet-500 rounded-full"></span>
                         {skill}
                       </li>
                     ))}
@@ -139,7 +135,7 @@ const AboutMe = () => {
           {/* Professional Experience Highlights */}
           <section>
             <h2 className="text-3xl font-bold mb-6 text-white">
-              Experience Highlights<span className="text-purple-400">.</span>
+              Experience Highlights<span className="text-violet-500">.</span>
             </h2>
             <div className="space-y-6">
               {experience.map((exp, index) => (
@@ -148,11 +144,11 @@ const AboutMe = () => {
                   className="bg-gray-800/30 rounded-xl p-6 border border-gray-700/50"
                 >
                   <h3 className="text-xl font-semibold text-white mb-2">{exp.role}</h3>
-                  <p className="text-purple-400 mb-4">{exp.company} • {exp.period}</p>
+                  <p className="text-violet-500 mb-4">{exp.company} • {exp.period}</p>
                   <ul className="space-y-2">
                     {exp.highlights.map((highlight, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <span className="w-2 h-2 bg-purple-400 rounded-full mt-2"></span>
+                        <span className="w-2 h-2 bg-violet-500 rounded-full mt-2"></span>
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -165,7 +161,7 @@ const AboutMe = () => {
           {/* Education Section */}
           <section>
             <h2 className="text-3xl font-bold mb-6 text-white">
-              Education<span className="text-purple-400">.</span>
+              Education<span className="text-violet-500">.</span>
             </h2>
             <div className="space-y-6">
               {education.map((edu, index) => (
@@ -174,7 +170,7 @@ const AboutMe = () => {
                   className="bg-gray-800/30 rounded-xl p-6 border border-gray-700/50"
                 >
                   <h3 className="text-xl font-semibold text-white mb-2">{edu.degree}</h3>
-                  <p className="text-purple-400">{edu.school} • {edu.year}</p>
+                  <p className="text-violet-500">{edu.school} • {edu.year}</p>
                 </div>
               ))}
             </div>
@@ -183,7 +179,7 @@ const AboutMe = () => {
           {/* Interest Section */}
           <section>
             <h2 className="text-3xl font-bold mb-6 text-white">
-              Beyond Coding<span className="text-purple-400">.</span>
+              Beyond Coding<span className="text-violet-500">.</span>
             </h2>
             <div className="prose prose-invert max-w-none">
               <p>
@@ -191,45 +187,6 @@ const AboutMe = () => {
                 rounded picture of who you are. Include hobbies, activities, or other passions
                 that make you unique.]
               </p>
-            </div>
-          </section>
-          
-          {/* Contact Section */}
-          <section>
-            <h2 className="text-3xl font-bold mb-6 text-white">
-              Get In Touch<span className="text-purple-400">.</span>
-            </h2>
-            <div className="prose prose-invert max-w-none">
-              <p>
-                I'm always interested in connecting with fellow developers and potential collaborators. Whether you want to discuss a project, share ideas, or just chat about technology, feel free to reach out!
-              </p>
-              <div className="flex gap-6 mt-6">
-                <a 
-                  href="mailto:Leilani.j.greer@gmail.com"
-                  className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
-                >
-                  <MdEmail className="w-5 h-5" />
-                  <span>Email</span>
-                </a>
-                <a 
-                  href="https://linkedin.com/in/leilanigreer"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
-                >
-                  <FaLinkedin className="w-5 h-5" />
-                  <span>LinkedIn</span>
-                </a>
-                <a 
-                  href="https://github.com/leilanigreer"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
-                >
-                  <FaGithub className="w-5 h-5" />
-                  <span>GitHub</span>
-                </a>
-              </div>
             </div>
           </section>
         </div>

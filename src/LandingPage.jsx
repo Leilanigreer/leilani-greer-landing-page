@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-gray-900 bg-[url('/LG_BG.png')] bg-cover bg-center bg-no-repeat">
@@ -12,12 +14,18 @@ const LandingPage = () => {
           Turning real life ideas into reality with passion and precision.
         </p>
         <div className="flex gap-4">
-          <button className="bg-violet-500 text-white px-6 py-2 rounded-md hover:bg-purple-600 transition-colors">
-            View Work
-          </button>
-          <button className="border border-white text-white px-6 py-2 rounded-md hover:bg-white/10 transition-colors">
-            Connect with me
-          </button>
+          <Link 
+            to="/projects"
+            className="w-44 bg-violet-500 text-white px-6 py-3 rounded-md hover:bg-purple-600 transition-colors"
+            >
+              View Work
+          </Link>
+          <Link 
+            to="/connect"
+            className="w-44 border border-white text-white px-6 py-3 rounded-md hover:bg-white/10 transition-colors"
+            >
+              Connect with me
+          </Link>
         </div>
       </main>
     </div>
