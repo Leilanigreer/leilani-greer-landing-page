@@ -29,7 +29,7 @@ export function Connect() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submission logic here
+    // Add form submission logic here
     console.log(formData);
   };
 
@@ -46,7 +46,7 @@ export function Connect() {
       <div className="max-w-6xl mx-auto p-8">
         <section className="max-w-2xl">
           <h2 className="text-3xl font-bold mb-6 text-white">
-            Get In Touch<span className="text-violet-500">.</span>
+            Lets Connect<span className="text-violet-500">.</span>
           </h2>
           
           <div className="space-y-8">

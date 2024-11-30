@@ -177,16 +177,33 @@ const AboutMe = () => {
           </section>
 
           {/* Interest Section */}
-          <section>
+          <section className="bg-gray-800/30 rounded-xl p-8 border border-gray-700/50">
             <h2 className="text-3xl font-bold mb-6 text-white">
               Beyond Coding<span className="text-violet-500">.</span>
             </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              <div className="p-6 rounded-lg bg-gray-900/50 border border-violet-500/20">
+                <div className="text-violet-500 text-3xl mb-4">🍷</div>
+                <h3 className="text-xl font-semibold mb-2">Wine Enthusiast</h3>
+                <p className="text-gray-400">Aspiring sommelier with dreams of running a tasting room</p>
+              </div>
+              
+              <div className="p-6 rounded-lg bg-gray-900/50 border border-violet-500/20">
+                <div className="text-violet-500 text-3xl mb-4">🐕</div>
+                <h3 className="text-xl font-semibold mb-2">Dog Parent</h3>
+                <p className="text-gray-400">Adventures with Duke, my energetic companion</p>
+              </div>
+              
+              <div className="p-6 rounded-lg bg-gray-900/50 border border-violet-500/20">
+                <div className="text-violet-500 text-3xl mb-4">👨‍🍳</div>
+                <h3 className="text-xl font-semibold mb-2">Food & Company</h3>
+                <p className="text-gray-400">Enjoying Karl's chef-level culinary creations</p>
+              </div>
+            </div>
+            
             <div className="prose prose-invert max-w-none">
-              <p>
-                [Write about your interests outside of programming. This helps create a more
-                rounded picture of who you are. Include hobbies, activities, or other passions
-                that make you unique.]
-              </p>
+              <p>I believe life's richest experiences happen beyond the screen. As an aspiring sommelier, I've developed a deep appreciation for wine culture and dream of sharing this passion with others in a tasting room during my retirement years. When I'm not coding, you'll likely find me at the local park with Duke, my energetic four-legged companion who never seems to run out of steam. I'm also a firm believer in the power of good food and great company – I'm fortunate to share my life with Karl, whose culinary talents rival those of professional chefs. Whether we're enjoying his latest kitchen masterpiece at home or discovering hidden gem restaurants with friends, these moments of connection, whether through a perfectly paired wine, a playful afternoon at the park, or savoring Karl's exceptional cooking, help me maintain balance and bring fresh perspectives to my technical work.</p>
             </div>
           </section>
         </div>
