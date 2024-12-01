@@ -1,6 +1,7 @@
+import { useState, useRef } from "react";
 import { MdEmail } from "react-icons/md";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const SOCIAL_LINKS = [
   {
@@ -22,16 +23,44 @@ const SOCIAL_LINKS = [
 
 export function Connect() {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    contact_name: "",
+    contact_email: "",
     message: ""
   });
 
+  const form = useRef(); 
+
+  const [status, setStatus] = useState({ type: '', message: ''});
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add form submission logic here
     console.log(formData);
-  };
+    setStatus({ type: 'pending', message: 'Sending message...' });
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        }
+      )
+        .then(
+          () => {
+            setStatus({ type: 'success', message: 'Message sent successfully!' });
+            // Clear form after successful submission
+            setFormData({ contact_name: '', contact_email: '', message: '' });
+          },
+          (error) => {
+            setStatus({ 
+              type: 'error', 
+              message: 'Failed to send message. Please try again.' 
+            });
+            console.error('EmailJS Error:', error.text);
+          }
+        );
+    };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -73,66 +102,78 @@ export function Connect() {
             </div>
 
             {/* Contact Form */}
-            <form onSubmit={handleSubmit} className="mt-12 space-y-6">
-              <div className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md 
-                             focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent
-                             transition-colors"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md 
-                             focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent
-                             transition-colors"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows="4"
-                    className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md 
-                             focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent
-                             transition-colors resize-none"
-                  />
-                </div>
+            <form ref={form} onSubmit={handleSubmit} className="mt-12 space-y-6">
+            <div className="space-y-4">
+              <div>
+                <label htmlFor="contact_name" className="block text-sm font-medium mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="contact_name"
+                  name="contact_name"
+                  value={formData.contact_name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md 
+                           focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent
+                           transition-colors"
+                />
               </div>
-              <button
-                type="submit"
-                className="w-full md:w-auto px-6 py-3 bg-violet-500 text-white rounded-md
-                         hover:bg-purple-600 transition-colors focus:outline-none focus:ring-2 
-                         focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-gray-900"
-              >
-                Send Message
-              </button>
-            </form>
+              <div>
+                <label htmlFor="contact_email" className="block text-sm font-medium mb-2">
+                  Email
+                </label>
+                <input
+                  type="contact_email"
+                  id="contact_email"
+                  name="contact_email" 
+                  value={formData.contact_email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md 
+                           focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent
+                           transition-colors"
+                />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows="4"
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md 
+                           focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent
+                           transition-colors resize-none"
+                />
+              </div>
+            </div>
+            
+            {/* Status message display */}
+            {status.message && (
+              <div className={`text-sm ${
+                status.type === 'success' ? 'text-green-500' : 
+                status.type === 'error' ? 'text-red-500' : 
+                'text-violet-500'
+              }`}>
+                {status.message}
+              </div>
+            )}
+
+            <button
+              type="submit"
+              className="w-full md:w-auto px-6 py-3 bg-violet-500 text-white rounded-md
+                       hover:bg-purple-600 transition-colors focus:outline-none focus:ring-2 
+                       focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+            >
+              Send Message
+            </button>
+          </form>
           </div>
         </section>
       </div>
