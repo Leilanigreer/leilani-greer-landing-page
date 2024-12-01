@@ -35,7 +35,7 @@ const AboutMe = () => {
 
   const experience = [
     {
-      role: "Co-Owner & Software Developer",
+      role: "Co-Owner & Technical Owner",
       company: "Little Prince Customs",
       period: "2023 - Present",
       highlights: [
@@ -58,7 +58,7 @@ const AboutMe = () => {
 
   const education = [
     {
-      degree: "Bachelor of Science in Business Administration Technology",
+      degree: "Bachelor of Science in Business Administration",
       school: "Saint Mary's College of California",
       year: "Graduate",
     },
@@ -93,7 +93,7 @@ const AboutMe = () => {
             {/* [Introduction paragraph: Write about who you are, your passion for development,
               and what drives you in the tech world. Make it personal and engaging.] */}
               <p>
-                I'm a Software Engineer based in Oakland, CA, with a unique background that bridges the gap between business operations and technical solutions. With over 10 years of experience in business operations, I've successfully transitioned into software engineering, bringing a valuable perspective that combines technical expertise with deep business acumen.
+                I'm a Software Engineer based in the San Francisco Bay Area, with a unique background that bridges the gap between business operations and technical solutions. With over 10 years of experience in business operations, I've successfully transitioned into software engineering, bringing a valuable perspective that combines technical expertise with deep business acumen.
               </p>
               {/* [Career focus: Describe your technical journey, what you're currently focused on,
                 and what you're excited about in tech.] */}

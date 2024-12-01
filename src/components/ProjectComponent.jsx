@@ -40,7 +40,7 @@ const ProjectComponent = ({
               {media.content.map((image, index) => (
                 <div 
                   key={index}
-                  className="w-40 sm:w-48 flex-shrink-0 rounded-lg overflow-hidden shadow-xl cursor-pointer"
+                  className="w-full sm:w-64 flex-shrink-0 rounded-lg overflow-hidden shadow-xl cursor-pointer"
                   onClick={() => setSelectedImage(image)}
                 >
                   <img 
