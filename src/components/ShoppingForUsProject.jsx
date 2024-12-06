@@ -7,14 +7,15 @@ const ShoppingForUsProject = () => {
     title: "Shopping 4 Us",
     technologies: ['React.js', 'Ruby on Rails', 'PostgreSQL', 'JWT'],
     description: [
-      "An e-commerce platform built with React.js frontend and Ruby on Rails backend, backed by a PostgreSQL database and secured with JWT authentication. Developed independently over three weeks, the application implements responsive design principles and cross-browser compatibility. Core technologies include Redux for state management, Active Storage for image handling, and Action Mailer for order notifications. The application features a product browsing system, shopping cart functionality, and order history tracking.",
-      "The admin dashboard enables product management, including CRUD operations for inventory items. Notable features include vendor relationship management and product image handling. Performance optimizations include image lazy loading and database query optimization. While designed as a demonstration, the platform implements complete e-commerce workflows without actual payment processing. Fully deployed on Railway's infrastructure."
+      "An e-commerce platform built with React.js frontend and Ruby on Rails backend, backed by a PostgreSQL database and secured with JWT authentication. Developed independently over three weeks, the application implements responsive design principles using Tailwind CSS for consistent styling and cross-browser compatibility.",
+      "The application features a role-based access system with distinct experiences for public users, authenticated shoppers, and administrators. Public users can browse and search products, while authenticated users gain access to a full-featured shopping cart with real-time tax calculations and comprehensive order tracking. The admin dashboard provides a product management interface with CRUD operations and image handling through URL integration.",
+      "A notable technical achievement is the implementation of a weekly automated database maintenance system that reverts any changes to the original dataset while preserving order history integrity. This solution ensures data consistency while maintaining access to historical purchase records. While designed as a demonstration platform that implements complete e-commerce workflows without payment processing, the application showcases features like form validation, error handling, and secure role-based access control. Fully deployed on Railway's infrastructure with automated maintenance routines."
     ],
     media: {
       type: 'images',
       content: [
         {
-          src: "S4U_ProductsPage.png", 
+          src: "S4U_ProductsPage3.png", 
           alt: "Shopping For Us Product Page" 
         }
       ]

@@ -49,7 +49,6 @@ export function Connect() {
         .then(
           () => {
             setStatus({ type: 'success', message: 'Message sent successfully!' });
-            // Clear form after successful submission
             setFormData({ contact_name: '', contact_email: '', message: '' });
           },
           (error) => {
