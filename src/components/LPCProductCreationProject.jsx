@@ -18,12 +18,10 @@ const LPCProductCreationProject = () => {
       "Currently in active use by LPC, this solution has processed over [X] products since deployment, with zero reported data inconsistencies. Planned feature enhancements include management interface for leather colors and thread options, collection-wide pricing updates, new style addition functionality, and Last Chance inventory management system with automated stock control."
     ],
     media: {
-      type: 'video',
+      type: 'mux',
       content: {
-        onPlay: () => {
-          // Implement your video play logic here
-          console.log('Play video');
-        }
+        playbackId: "r8NC5rNRs9Hps1Shsf4Zj00pDlZf2uqKmjbC78XGX4bo",
+        title: "Product Management App for LPC",
       }
     },
     links: {

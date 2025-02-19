@@ -1,5 +1,6 @@
-import { FaExternalLinkAlt, FaPlayCircle, FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { useState } from "react";
+import MuxPlayer from '@mux/mux-player-react';
 
 const ProjectComponent = ({ 
   title, 
@@ -54,18 +55,29 @@ const ProjectComponent = ({
           )}
         </div>
 
-        {/* Video Section - Only rendered if media type is video */}
+        {/* Video Section - Now handles both iframe and Mux videos */}
         {media.type === 'video' && (
-          <div className="mb-6 relative rounded-lg overflow-hidden bg-gray-900/50">
-            <div className="aspect-video flex items-center justify-center">
-              <button 
-                onClick={media.content.onPlay}
-                className="flex items-center gap-3 text-violet-500 hover:text-purple-300 transition-colors"
-              >
-                <FaPlayCircle className="w-12 h-12 sm:w-16 sm:h-16" />
-                <span className="text-base sm:text-lg">Watch Video Walkthrough</span>
-              </button>
-            </div>
+          <div className="mb-6 relative" style={{ padding: '56.25% 0 0 0' }}>
+            <iframe
+              src={media.content.src}
+              title={media.content.title}
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              allowFullScreen
+            />
+          </div>
+        )}
+        {media.type === 'mux' && (
+          <div className="mb-6">
+            <MuxPlayer
+              playbackId={media.content.playbackId}
+              metadataVideoTitle={media.content.title}
+              style={{ aspectRatio: '16/9' }}
+              primaryColor="#ffffff"
+              secondaryColor="#000000"
+              accentColor="#8b5cf6" // Using violet-500 to match your theme
+            />
           </div>
         )}
 
