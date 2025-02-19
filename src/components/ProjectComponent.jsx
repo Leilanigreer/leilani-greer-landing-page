@@ -76,7 +76,8 @@ const ProjectComponent = ({
               style={{ aspectRatio: '16/9' }}
               primaryColor="#ffffff"
               secondaryColor="#000000"
-              accentColor="#8b5cf6" // Using violet-500 to match your theme
+              accentColor="#8b5cf6"
+              poster={`https://image.mux.com/${media.content.playbackId}/thumbnail.png?time=${media.content.time}`}
             />
           </div>
         )}

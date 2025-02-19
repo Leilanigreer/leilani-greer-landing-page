@@ -22,6 +22,7 @@ const LPCProductCreationProject = () => {
       content: {
         playbackId: "r8NC5rNRs9Hps1Shsf4Zj00pDlZf2uqKmjbC78XGX4bo",
         title: "Product Management App for LPC",
+        time: 21
       }
     },
     links: {
