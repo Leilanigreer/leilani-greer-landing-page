@@ -9,6 +9,17 @@ export function Header() {
   
   const navItems = ["Home", "Projects", "About Me", "Connect"];
 
+  const ResumeLink = ({ className = "" }) => (
+    <a
+      href="/LeilaniGreerSoftwareEngineeringResume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`text-white hover:text-white/90 transition-colors duration-300 ${className}`}
+    >
+      Resume
+    </a>
+  );
+
   const NavLink = ({ item, onClick }) => (
     <motion.div
       whileHover={{ y: -2 }}
@@ -49,10 +60,11 @@ export function Header() {
           </motion.span>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-8">
+          <div className="hidden md:flex gap-8 items-center">
             {navItems.map((item) => (
               <NavLink key={item} item={item} />
             ))}
+            <ResumeLink />
           </div>
 
           {/* Mobile Menu Button */}
@@ -83,6 +95,7 @@ export function Header() {
                     onClick={() => setIsOpen(false)}
                   />
                 ))}
+                <ResumeLink className="py-1 px-2" />
               </div>
             </motion.div>
           )}

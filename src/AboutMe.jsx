@@ -169,8 +169,22 @@ const AboutMe = () => {
                   key={index}
                   className="bg-gray-800/30 rounded-xl p-6 border border-gray-700/50"
                 >
-                  <h3 className="text-xl font-semibold text-white mb-2">{edu.degree}</h3>
-                  <p className="text-violet-500">{edu.school} • {edu.year}</p>
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2">{edu.degree}</h3>
+                      <p className="text-violet-500">{edu.school} • {edu.year}</p>
+                    </div>
+                    {edu.school === "Actualize Coding Bootcamp" && (
+                      <a
+                        href="/ActualizeCertification.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3 py-1.5 bg-violet-500 text-white text-sm rounded-md hover:bg-purple-600 transition-colors"
+                      >
+                        View Certificate
+                      </a>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
