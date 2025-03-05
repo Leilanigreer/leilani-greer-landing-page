@@ -36,7 +36,7 @@ const ProjectComponent = ({
           </div>
 
           {/* Media Section - Either Images or Video */}
-          {media.type === 'images' && (
+          {media?.type === 'images' && (
             <div className="flex gap-4 overflow-x-auto pb-2">
               {media.content.map((image, index) => (
                 <div 
@@ -56,7 +56,7 @@ const ProjectComponent = ({
         </div>
 
         {/* Video Section - Now handles both iframe and Mux videos */}
-        {media.type === 'video' && (
+        {media?.type === 'video' && (
           <div className="mb-6 relative" style={{ padding: '56.25% 0 0 0' }}>
             <iframe
               src={media.content.src}
@@ -68,7 +68,7 @@ const ProjectComponent = ({
             />
           </div>
         )}
-        {media.type === 'mux' && (
+        {media?.type === 'mux' && (
           <div className="mb-6">
             <MuxPlayer
               playbackId={media.content.playbackId}

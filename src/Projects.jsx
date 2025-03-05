@@ -3,7 +3,8 @@
 import GISProject from './components/GISProject';
 import ShoppingForUsProject from './components/ShoppingForUsProject';
 import LPCProductCreationProject from './components/LPCProductCreationProject';
-
+import ShopsAt550Project from './components/ShopsAt550Project';
+import PortfolioProject from './components/PortfolioProject';
 export function Projects() {
   return (
     <div className="min-h-screen bg-gray-900 text-gray-300">
@@ -17,10 +18,12 @@ export function Projects() {
           </p>
         </div>
 
-        <div className="space-y-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <GISProject />
           <ShoppingForUsProject />
           <LPCProductCreationProject />
+          <ShopsAt550Project />
+          <PortfolioProject />
         </div>
       </div>
     </div>
