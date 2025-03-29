@@ -1,26 +1,48 @@
+// src/components/PortfolioProject.jsx
 import ProjectComponent from './ProjectComponent';
-import {FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+
+
+const projectData = {
+  id: 'portfolio',
+  title: "Portfolio Website",
+  technologies: ['React.js', 'Tailwind CSS', 'Framer Motion', 'EmailJS'],
+  date: new Date('2024-11-20'),
+  displayDate: 'Nov 2024',
+  status: 'ongoing',
+  description: [
+    "A modern, responsive portfolio website built with React.js and Tailwind CSS, featuring smooth animations powered by Framer Motion. The site showcases my projects, skills, and experience in an engaging and interactive way.",
+    "Key features include a dynamic project showcase with filtering and sorting capabilities, a contact form integrated with EmailJS for seamless communication, and a responsive design that works beautifully across all devices. The UI incorporates a dark theme with violet accents, creating a professional and visually appealing experience."
+  ],
+  // media: {
+  //   type: 'images',
+  //   content: [
+  //     {
+  //       src: "Portfolio_HomePage.png",
+  //       alt: "Portfolio Website Home Page"
+  //     }
+  //   ]
+  // },
+  links: {
+    // live: [
+    //   {
+    //     href: "https://leilanigreer.com/",
+    //     text: "Live Site",
+    //     icon: <FaExternalLinkAlt className="w-4 h-4 relative z-10" />
+    //   }
+    // ],
+    github: [
+      {
+        href: "https://github.com/Leilanigreer/leilani-greer-landing-page",
+        text: "GitHub",
+        icon: <FaGithub size={16} className="w-4 h-4" />
+      }
+    ]
+  }
+};
 
 const PortfolioProject = () => {
-  const projectData = {
-    title: "Portfolio Website",
-    technologies: ['React', 'Tailwind CSS', 'Railway', 'Vite'],
-    description: [
-      "My personal portfolio website showcases my projects and skills as a developer. Built with React and styled with Tailwind CSS, it features a clean, responsive design with smooth animations and a dark theme.",
-      "The site is deployed on Railway for reliable hosting and uses Vite for an optimized development experience. The project demonstrates my ability to create modern, performant web applications while incorporating best practices in web development."
-    ],
-    links: {
-      github: [
-        {
-          href: "https://github.com/Leilanigreer/leilani-greer-landing-page",
-          text: "GitHub",
-          icon: <FaGithub size={16} className="w-4 h-4" />
-        }
-      ]
-    }
-  };
-
   return <ProjectComponent {...projectData} />;
 };
 
-export default PortfolioProject; 
+export default PortfolioProject;
