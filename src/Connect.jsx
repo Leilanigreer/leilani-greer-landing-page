@@ -79,7 +79,7 @@ export function Connect() {
           
           <div className="space-y-8">
             <p className="text-lg leading-relaxed">
-              I'm always interested in connecting with fellow developers and potential collaborators. 
+              I&apos;m always interested in connecting with fellow developers and potential collaborators. 
               Whether you want to discuss a project, share ideas, or just chat about technology, 
               feel free to reach out!
             </p>
