@@ -1,5 +1,5 @@
 // src/Projects.jsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaSortAmountDown, FaSortAmountUp } from 'react-icons/fa';
 import ProjectSidebar from './components/ProjectSidebar';
@@ -13,7 +13,7 @@ function Projects() {
   const projectsData = getProjectsArray();
 
   // State for currently selected project and sort order
-  const [selectedProject, setSelectedProject] = useState(projectsData[0].id);
+  const [selectedProject, setSelectedProject] = useState(null);
   const [sortAscending, setSortAscending] = useState(false);
   
   // Sort projects by date
@@ -24,6 +24,13 @@ function Projects() {
       return b.date - a.date; // Newest to oldest (default)
     }
   });
+
+  // Set initial selected project after sorting
+  useEffect(() => {
+    if (selectedProject === null) {
+      setSelectedProject(sortedProjects[0].id);
+    }
+  }, [sortedProjects, selectedProject]);
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-300">
@@ -67,15 +74,17 @@ function Projects() {
           {/* Main Content Area */}
           <div className="flex-1">
             <AnimatePresence mode="wait">
-              <motion.div
-                key={selectedProject}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
-              >
-                <ProjectComponent {...projectData[selectedProject]} />
-              </motion.div>
+              {selectedProject && (
+                <motion.div
+                  key={selectedProject}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <ProjectComponent {...projectData[selectedProject]} />
+                </motion.div>
+              )}
             </AnimatePresence>
           </div>
         </div>

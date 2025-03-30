@@ -95,7 +95,7 @@ const AboutMe = () => {
           {/* Introduction Section */}
           <section>
             <h2 className="text-3xl font-bold mb-6 text-white">
-              Hello, I'm Leilani<span className="text-violet-500">!</span>
+              Hello, I&apos;m Leilani<span className="text-violet-500">!</span>
             </h2>
             <div className="prose prose-invert max-w-none space-y-4">
             {/* [Introduction paragraph: Write about who you are, your passion for development,
