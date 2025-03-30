@@ -1,35 +1,43 @@
 const AboutMe = () => {
-  const skills = {
-    languages: [
-      'JavaScript',
-      'Ruby',
-      'SQL',
-      'Google Apps Scripts',
+  const skillCategories = {
+    "Core Technologies": [
+      "React.js", 
+      "Ruby on Rails", 
+      "PostgreSQL", 
+      "Tailwind CSS"
     ],
-    frontend: [
-      'React.js',
-      'Remix',
-      'Bootstrap',
-      'Tailwind CSS',
-      'Polaris',
+    "Languages": [
+      "JavaScript",
+      "TypeScript",
+      "Ruby", 
+      "SQL"
     ],
-    backend: [
-      'Ruby on Rails',
-      'REST APIs',
-      'GraphQL',
-      'Prisma',
+    "Frontend": [
+      "Remix",
+      "Bootstrap",
+      "Polaris"
     ],
-    databases: [
-      'PostgreSQL', 
-      'MySQL',
-      'AWS S3',
+    "Backend & APIs": [
+      "REST APIs",
+      "GraphQL",
+      "JWT",
+      "Prisma"
     ],
-    tools: [
-      'Git/GitHub',
-      'Postman',
-      'HTTPie',
-      'Jira',
-      'Confluence',
+    "Cloud & Storage": [
+      "Railway",
+      "AWS S3",
+      "Cloudinary"
+    ],
+    "Tools & Workflow": [
+      "Git/GitHub",
+      "Postman/HTTPie",
+      "Jira/Confluence"
+    ],
+    "Integrations": [
+      "Shopify",
+      "Google APIs",
+      "EmailJS",
+      "Google Apps Scripts"
     ]
   };
 
@@ -93,40 +101,65 @@ const AboutMe = () => {
             {/* [Introduction paragraph: Write about who you are, your passion for development,
               and what drives you in the tech world. Make it personal and engaging.] */}
               <p>
-                I'm a Software Engineer based in the San Francisco Bay Area, with a unique background that bridges the gap between business operations and technical solutions. With over 10 years of experience in business operations, I've successfully transitioned into software engineering, bringing a valuable perspective that combines technical expertise with deep business acumen.
+                I&apos;m a Software Engineer based in the San Francisco Bay Area, with a unique background that bridges the gap between business operations and technical solutions. With over 10 years of experience in business operations, I&apos;ve successfully transitioned into software engineering, bringing a valuable perspective that combines technical expertise with deep business acumen.
               </p>
               {/* [Career focus: Describe your technical journey, what you're currently focused on,
                 and what you're excited about in tech.] */}
               <p>
-                My journey in tech has been driven by a passion for creating efficient, scalable solutions that solve real business problems. From managing $250MM+ platforms to developing custom automation tools that save hundreds of work hours, I've consistently demonstrated the ability to deliver high-impact technical solutions while maintaining a strong focus on business objectives.
+                My journey in tech has been driven by a passion for creating efficient, scalable solutions that solve real business problems. From managing $250MM+ platforms to developing custom automation tools that save hundreds of work hours, I&apos;ve consistently demonstrated the ability to deliver high-impact technical solutions while maintaining a strong focus on business objectives.
               </p>
               {/* [Professional goals: Share what you're working towards and what kind of 
                 opportunities you're looking for.] */}
               <p>
-                Currently, I'm focused on full-stack development using React, Ruby on Rails, and modern database technologies. I'm passionate about creating intuitive user experiences while ensuring robust backend implementations that can scale with business needs.
+                Currently, I&apos;m focused on full-stack development using React, Ruby on Rails, and modern database technologies. I&apos;m passionate about creating intuitive user experiences while ensuring robust backend implementations that can scale with business needs.
               </p>
             </div>
           </section>
 
-          {/* Skills Section */}
           <section>
             <h2 className="text-3xl font-bold mb-6 text-white">
               Technical Skills<span className="text-violet-500">.</span>
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {Object.entries(skills).map(([category, skillList]) => (
-                <div key={category} className="bg-gray-800/30 rounded-xl p-6 border border-gray-700/50">
-                  <h3 className="text-xl font-semibold mb-4 text-violet-500 capitalize">
+            
+            {/* Core Skills Highlight */}
+            <div className="mb-8 bg-gray-800/30 rounded-xl p-6 border border-gray-700/50">
+              <h3 className="text-xl font-semibold mb-4 text-violet-500">
+                Specialized In
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {skillCategories["Core Technologies"].map((skill) => (
+                  <span 
+                    key={skill} 
+                    className="px-4 py-2 bg-violet-500/20 text-white rounded-lg font-medium"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+            
+            {/* Other Skills Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {Object.entries(skillCategories).filter(([category]) => 
+                category !== "Core Technologies"
+              ).map(([category, skills]) => (
+                <div 
+                  key={category} 
+                  className="bg-gray-800/30 rounded-xl p-4 border border-gray-700/50"
+                >
+                  <h3 className="text-lg font-semibold mb-3 text-violet-500">
                     {category}
                   </h3>
-                  <ul className="space-y-2">
-                    {skillList.map((skill) => (
-                      <li key={skill} className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-violet-500 rounded-full"></span>
+                  <div className="flex flex-wrap gap-2">
+                    {skills.map((skill) => (
+                      <span 
+                        key={skill} 
+                        className="px-3 py-1 bg-gray-700/50 text-gray-300 rounded-full text-sm"
+                      >
                         {skill}
-                      </li>
+                      </span>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               ))}
             </div>
@@ -212,12 +245,12 @@ const AboutMe = () => {
               <div className="p-6 rounded-lg bg-gray-900/50 border border-violet-500/20">
                 <div className="text-violet-500 text-3xl mb-4">👨‍🍳</div>
                 <h3 className="text-xl font-semibold mb-2">Food & Company</h3>
-                <p className="text-gray-400">Enjoying Karl's chef-level culinary creations</p>
+                <p className="text-gray-400">Enjoying Karl&apos;s chef-level culinary creations</p>
               </div>
             </div>
             
             <div className="prose prose-invert max-w-none">
-              <p>I believe life's richest experiences happen beyond the screen. As an aspiring sommelier, I've developed a deep appreciation for wine culture and dream of sharing this passion with others in a tasting room during my retirement years. When I'm not coding, you'll likely find me at the local park with Duke, my energetic four-legged companion who never seems to run out of steam. I'm also a firm believer in the power of good food and great company – I'm fortunate to share my life with Karl, whose culinary talents rival those of professional chefs. Whether we're enjoying his latest kitchen masterpiece at home or discovering hidden gem restaurants with friends, these moments of connection, whether through a perfectly paired wine, a playful afternoon at the park, or savoring Karl's exceptional cooking, help me maintain balance and bring fresh perspectives to my technical work.</p>
+              <p>I believe life&apos;s richest experiences happen beyond the screen. As an aspiring sommelier, I&apos;ve developed a deep appreciation for wine culture and dream of sharing this passion with others in a tasting room during my retirement years. When I&apos;m not coding, you&apos;ll likely find me at the local park with Duke, my energetic four-legged companion who never seems to run out of steam. I&apos;m also a firm believer in the power of good food and great company – I&apos;m fortunate to share my life with Karl, whose culinary talents rival those of professional chefs. Whether we&apos;re enjoying his latest kitchen masterpiece at home or discovering hidden gem restaurants with friends, these moments of connection, whether through a perfectly paired wine, a playful afternoon at the park, or savoring Karl&apos;s exceptional cooking, help me maintain balance and bring fresh perspectives to my technical work.</p>
             </div>
           </section>
         </div>
