@@ -72,7 +72,7 @@ function Projects() {
           />
 
           {/* Main Content Area */}
-          <div className="flex-1">
+          <div className="flex-1 project-main-content">
             <AnimatePresence mode="wait">
               {selectedProject && (
                 <motion.div
