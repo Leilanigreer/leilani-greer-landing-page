@@ -2,22 +2,15 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaSortAmountDown, FaSortAmountUp } from 'react-icons/fa';
-import GISProject from './components/GISProject';
-import ShoppingForUsProject from './components/ShoppingForUsProject';
-import LPCProductCreationProject from './components/LPCProductCreationProject';
-import ShopsAt550Project from './components/ShopsAt550Project';
-import PortfolioProject from './components/PortfolioProject';
 import ProjectSidebar from './components/ProjectSidebar';
+import ProjectComponent from './components/ProjectComponent';
+import projectData from './data/projectData';
+// Import the helper function to get all projects as an array
+import { getProjectsArray } from './data/projectData';
 
-export function Projects() {
-  // Projects data array with metadata from each project
-  const projectsData = [
-    { id: 'gis', title: 'Get In Shape (G.I.S)', technologies: ['React.js', 'Ruby on Rails', 'PostgreSQL', 'JWT'], date: new Date('2024-11-06'), displayDate: 'Nov 2024', status: 'completed' },
-    { id: 'shopping4us', title: 'Shopping 4 Us', technologies: ['React.js', 'Ruby on Rails', 'PostgreSQL', 'JWT'], date: new Date('2024-09-09'), displayDate: 'Sep 2024', status: 'completed' },
-    { id: 'lpc', title: 'LPC Product Creation', technologies: ['Remix', 'PostgreSQL', 'Prisma', 'Shopify CLI', 'GraphQL', 'Polaris'], date: new Date('2024-10-17'), displayDate: 'Oct 2024', status: 'ongoing' },
-    { id: 'shops550', title: 'The Shops At 550', technologies: ['React.tsx', 'Tailwind CSS', 'TypeScript', 'Cloudinary'], date: new Date('2025-02-26'), displayDate: 'Feb 2025', status: 'completed' },
-    { id: 'portfolio', title: 'Portfolio Website', technologies: ['React.js', 'Tailwind CSS', 'Railway'], date: new Date('2024-11-20'), displayDate: 'Nov 2024', status: 'ongoing' }
-  ];
+function Projects() {
+  // Get project data from centralized store
+  const projectsData = getProjectsArray();
 
   // State for currently selected project and sort order
   const [selectedProject, setSelectedProject] = useState(projectsData[0].id);
@@ -31,15 +24,6 @@ export function Projects() {
       return b.date - a.date; // Newest to oldest (default)
     }
   });
-
-  // Map of project components
-  const projectComponents = {
-    gis: <GISProject />,
-    shopping4us: <ShoppingForUsProject />,
-    lpc: <LPCProductCreationProject />,
-    shops550: <ShopsAt550Project />,
-    portfolio: <PortfolioProject />
-  };
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-300">
@@ -90,7 +74,7 @@ export function Projects() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
               >
-                {projectComponents[selectedProject]}
+                <ProjectComponent {...projectData[selectedProject]} />
               </motion.div>
             </AnimatePresence>
           </div>

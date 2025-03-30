@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { Header } from "./components/Header";
-import { Projects } from "./Projects";
+import Projects from "./Projects";
 import LandingPage from "./LandingPage";
 import AboutMe from "./AboutMe";
 import { Connect } from "./Connect";
