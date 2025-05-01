@@ -25,12 +25,32 @@ function Projects() {
     }
   });
 
-  // Set initial selected project after sorting
+  // Handle URL hash changes and initial load
   useEffect(() => {
-    if (selectedProject === null) {
-      setSelectedProject(sortedProjects[0].id);
-    }
-  }, [sortedProjects, selectedProject]);
+    const handleHashChange = () => {
+      const hash = window.location.hash.slice(1); // Remove the # symbol
+      if (hash && projectData[hash]) {
+        setSelectedProject(hash);
+      } else if (sortedProjects.length > 0) {
+        setSelectedProject(sortedProjects[0].id);
+      }
+    };
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    
+    // Handle initial load
+    handleHashChange();
+
+    // Cleanup listener
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, [sortedProjects]);
+
+  // Update URL hash when selected project changes
+  const handleProjectSelect = (projectId) => {
+    setSelectedProject(projectId);
+    window.location.hash = projectId;
+  };
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-300">
@@ -68,7 +88,7 @@ function Projects() {
           <ProjectSidebar 
             projects={sortedProjects}
             selectedProject={selectedProject}
-            onProjectSelect={setSelectedProject}
+            onProjectSelect={handleProjectSelect}
           />
 
           {/* Main Content Area */}
