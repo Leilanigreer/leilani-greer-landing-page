@@ -12,6 +12,7 @@
   "dependencies": {
     "@cloudinary/url-gen": "^1.21.0",
     "@emailjs/browser": "^4.4.1",
+    "@tailwindcss/postcss": "^4.1.5",
     "cloudinary-video-player": "^2.4.1",
     "framer-motion": "^11.18.2",
     "react": "^19.1.0",
