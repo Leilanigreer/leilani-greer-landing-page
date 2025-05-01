@@ -5,7 +5,15 @@ const LandingPage = () => {
   const backgroundImageUrl = getCloudinaryUrl('LG_BG_tlenmy');
   
   return (
-    <div className={`min-h-screen bg-gray-900 bg-[url('${backgroundImageUrl}')] bg-cover bg-center bg-no-repeat`}>
+    <div 
+      style={{ 
+        backgroundImage: `url('${backgroundImageUrl}')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+      className="min-h-screen bg-gray-900"
+    >
       <main className="flex flex-col items-center justify-start pt-40 min-h-[80vh] text-center">
         <h1 className="text-5xl font-bold text-white mb-2">
           Leilani<span className="text-violet-500">.</span>
