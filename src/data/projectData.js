@@ -1,4 +1,5 @@
 // src/data/projectData.js
+import { getCloudinaryUrl } from "../config/cloudinary";
 
 // Central project data store
 const projectData = {
@@ -17,7 +18,7 @@ const projectData = {
       type: 'images',
       content: [
         {
-          src: "GIS_ExercisePage.png",
+          src: getCloudinaryUrl('GIS_ExercisePage_jtneko'),
           alt: "GIS Exercise Page"
         }
       ]
@@ -68,8 +69,8 @@ const projectData = {
       type: 'images',
       content: [
         {
-          src: "S4U_ProductsPage3.png", 
-          alt: "Shopping For Us Product Page" 
+          src: getCloudinaryUrl('S4U_ProductsPage3_tvtokk'),
+          alt: "Shopping For Us Product Page"
         }
       ]
     }, 
@@ -115,12 +116,30 @@ const projectData = {
       "Currently in active use by LPC, this solution has processed over [X] products since deployment, with zero reported data inconsistencies. Planned feature enhancements include management interface for leather colors and thread options, collection-wide pricing updates, new style addition functionality, and Last Chance inventory management system with automated stock control."
     ],
     media: {
-      type: 'mux',
-      content: {
-        playbackId: "r8NC5rNRs9Hps1Shsf4Zj00pDlZf2uqKmjbC78XGX4bo",
-        title: "Product Management App for LPC",
-        time: 21
-      }
+      type: 'cloudinary',
+      content: [
+        {
+          publicId: 'odknbtghwrfd4wydktqm',
+          title: "Product Management App for LPC - Version 3",
+          label: "Integrated Workflow",
+          date: "May 2025",
+          posterTime: '2.1'
+        },
+        {
+          publicId: 'samples/dance-2',
+          title: "Product Management App for LPC - Version 2",
+          label: "Database-Driven",
+          date: "Feb 2025",
+          posterTime: '2'
+        },
+        {
+          publicId: 'samples/elephants',
+          title: "Product Management App for LPC - Version 1",
+          label: "Where It Began",
+          date: "Dec 2024",
+          posterTime: '2'
+        }
+      ]
     },
     links: {
       github: [
@@ -150,7 +169,7 @@ const projectData = {
       type: 'images',
       content: [
         {
-          src: "ShopsAt550_HomePage.png",
+          src: getCloudinaryUrl('ShopsAt550_HomePage_knkbdr'),
           alt: "Shops At 550 Home Page"
         }
       ]

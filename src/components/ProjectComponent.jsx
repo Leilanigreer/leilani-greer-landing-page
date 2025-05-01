@@ -1,6 +1,7 @@
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { useState } from "react";
-import MuxPlayer from '@mux/mux-player-react';
+import VideoPlayer from './VideoPlayer';
+import VideoTimeline from './VideoTimeline';
 
 const ProjectComponent = ({ 
   title, 
@@ -10,6 +11,18 @@ const ProjectComponent = ({
   links 
 }) => {
   const [selectedImage, setSelectedImage] = useState(null);
+  
+  // Handle video versions if they exist
+  const [currentVideoVersion, setCurrentVideoVersion] = useState(
+    media?.type === 'cloudinary' && Array.isArray(media.content) 
+      ? media.content[0] 
+      : media?.content
+  );
+
+  // Convert single video to array format for consistency
+  const videoVersions = media?.type === 'cloudinary' 
+    ? (Array.isArray(media.content) ? media.content : [media.content])
+    : [];
 
   return (
     <>
@@ -55,30 +68,23 @@ const ProjectComponent = ({
           )}
         </div>
 
-        {/* Video Section - Now handles both iframe and Mux videos */}
-        {media?.type === 'video' && (
-          <div className="mb-6 relative" style={{ padding: '56.25% 0 0 0' }}>
-            <iframe
-              src={media.content.src}
-              title={media.content.title}
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              allowFullScreen
-            />
-          </div>
-        )}
-        {media?.type === 'mux' && (
+        {/* Video Section with Timeline */}
+        {media?.type === 'cloudinary' && (
           <div className="mb-6">
-            <MuxPlayer
-              playbackId={media.content.playbackId}
-              metadataVideoTitle={media.content.title}
-              style={{ aspectRatio: '16/9' }}
-              primaryColor="#ffffff"
-              secondaryColor="#000000"
-              accentColor="#8b5cf6"
-              poster={`https://image.mux.com/${media.content.playbackId}/thumbnail.png?time=${media.content.time}`}
+            {/* Video Player */}
+            <VideoPlayer 
+              publicId={currentVideoVersion.publicId}
+              posterTime={currentVideoVersion.posterTime}
             />
+            
+            {/* Video Timeline */}
+            {videoVersions.length > 1 && (
+              <VideoTimeline
+                versions={videoVersions}
+                currentVersion={currentVideoVersion}
+                onVersionSelect={setCurrentVideoVersion}
+              />
+            )}
           </div>
         )}
 
