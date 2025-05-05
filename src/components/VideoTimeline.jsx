@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 const VideoTimeline = ({ versions, onVersionSelect, currentVersion }) => {
   return (
     <div className="w-full mb-4">
