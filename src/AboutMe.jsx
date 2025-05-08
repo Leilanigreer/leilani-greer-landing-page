@@ -26,7 +26,8 @@ const AboutMe = () => {
     "Cloud & Storage": [
       "Railway",
       "AWS S3",
-      "Cloudinary"
+      "Cloudinary",
+      "Mux"
     ],
     "Tools & Workflow": [
       "Git/GitHub",
@@ -98,18 +99,12 @@ const AboutMe = () => {
               Hello, I&apos;m Leilani<span className="text-violet-500">!</span>
             </h2>
             <div className="prose prose-invert max-w-none space-y-4">
-            {/* [Introduction paragraph: Write about who you are, your passion for development,
-              and what drives you in the tech world. Make it personal and engaging.] */}
               <p>
                 I&apos;m a Software Engineer based in the San Francisco Bay Area, with a unique background that bridges the gap between business operations and technical solutions. With over 10 years of experience in business operations, I&apos;ve successfully transitioned into software engineering, bringing a valuable perspective that combines technical expertise with deep business acumen.
               </p>
-              {/* [Career focus: Describe your technical journey, what you're currently focused on,
-                and what you're excited about in tech.] */}
               <p>
                 My journey in tech has been driven by a passion for creating efficient, scalable solutions that solve real business problems. From managing $250MM+ platforms to developing custom automation tools that save hundreds of work hours, I&apos;ve consistently demonstrated the ability to deliver high-impact technical solutions while maintaining a strong focus on business objectives.
               </p>
-              {/* [Professional goals: Share what you're working towards and what kind of 
-                opportunities you're looking for.] */}
               <p>
                 Currently, I&apos;m focused on full-stack development using React, Ruby on Rails, and modern database technologies. I&apos;m passionate about creating intuitive user experiences while ensuring robust backend implementations that can scale with business needs.
               </p>
@@ -233,7 +228,7 @@ const AboutMe = () => {
               <div className="p-6 rounded-lg bg-gray-900/50 border border-violet-500/20">
                 <div className="text-violet-500 text-3xl mb-4">🍷</div>
                 <h3 className="text-xl font-semibold mb-2">Wine Enthusiast</h3>
-                <p className="text-gray-400">Aspiring sommelier with dreams of running a tasting room</p>
+                <p className="text-gray-400">Aspiring sommelier with dreams of retiring to work in a tasting room</p>
               </div>
               
               <div className="p-6 rounded-lg bg-gray-900/50 border border-violet-500/20">

@@ -14,23 +14,7 @@ const projectData = {
     "A modern, responsive portfolio website built with React.js and Tailwind CSS, featuring smooth animations powered by Framer Motion. The site showcases my projects, skills, and experience in an engaging and interactive way.",
     "Key features include a dynamic project showcase with filtering and sorting capabilities, a contact form integrated with EmailJS for seamless communication, and a responsive design that works beautifully across all devices. The UI incorporates a dark theme with violet accents, creating a professional and visually appealing experience."
   ],
-  // media: {
-  //   type: 'images',
-  //   content: [
-  //     {
-  //       src: "Portfolio_HomePage.png",
-  //       alt: "Portfolio Website Home Page"
-  //     }
-  //   ]
-  // },
   links: {
-    // live: [
-    //   {
-    //     href: "https://leilanigreer.com/",
-    //     text: "Live Site",
-    //     icon: <FaExternalLinkAlt className="w-4 h-4 relative z-10" />
-    //   }
-    // ],
     github: [
       {
         href: "https://github.com/Leilanigreer/leilani-greer-landing-page",

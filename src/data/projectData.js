@@ -111,33 +111,39 @@ const projectData = {
     displayDate: 'Oct 2024',
     status: 'ongoing',
     description: [
-      "A production-ready Remix application that streamlines custom leather product management. Built as a solo project in collaboration with LPC stakeholders, this tool has significantly reduced product creation time from 30 minutes to under 5 minutes per item. Developed using Prisma for database operations, PostgreSQL for data storage, and Polaris for UI components, with comprehensive error handling and data validation. Development and deployment are streamlined using Shopify CLI, facilitating seamless integration with the Shopify ecosystem.",
-      "The application automatically generates unique SKUs, product titles, descriptions, and variant names through a sophisticated validation process. Testing implementation includes Jest for unit testing and Cypress for end-to-end testing, ensuring reliable functionality across all features. The system integrates with Shopify through GraphQL mutations for product creation and maintains data consistency with a Railway-hosted PostgreSQL database.",
-      "Currently in active use by LPC, this solution has processed over [X] products since deployment, with zero reported data inconsistencies. Planned feature enhancements include management interface for leather colors and thread options, collection-wide pricing updates, new style addition functionality, and Last Chance inventory management system with automated stock control."
+      "A production-ready Remix application that streamlines custom leather golf headcover management for Little Prince Customs. Built as a solo project in close collaboration with stakeholders, this tool has dramatically reduced product creation time from 60 minutes to under 5 minutes per item.",
+      
+      "The application's core functionality leverages a database-driven architecture where all collection requirements, style relationships, thread compatibility, and pricing rules are defined in PostgreSQL rather than hardcoded. This provides tremendous flexibility and eliminates the need for code changes when business requirements evolve.",
+      
+      "The dynamic form system intelligently adapts based on collection-specific configurations, showing only relevant fields for each product type. Leather colors, embroidery threads, shape configurations and style options are all presented contextually, with real-time validation ensuring data integrity throughout the process.",
+      
+      "Key technical features include sophisticated SKU generation with automatic version tracking, tiered pricing calculations with shape-specific adjustments, cloud storage integration for product imagery via Google Drive and Cloudinary, and a complete product preview system before final creation via Shopify's GraphQL API.",
+      
+      "Currently in active use by the manufacturing team, this solution has processed hundreds of products with zero reported data inconsistencies. Future enhancements include inventory management across multiple sales channels, bulk pricing updates, and a streamlined workflow for introducing new materials."
     ],
     media: {
       type: 'cloudinary',
       content: [
+        // {
+        //   publicId: 'samples/elephants',
+        //   title: "Product Management App for LPC - Version 3",
+        //   label: "Integrated Workflow",
+        //   date: "May 2025",
+        //   posterTime: '2.1'
+        // },
         {
-          publicId: 'odknbtghwrfd4wydktqm',
-          title: "Product Management App for LPC - Version 3",
-          label: "Integrated Workflow",
-          date: "May 2025",
-          posterTime: '2.1'
-        },
-        {
-          publicId: 'samples/dance-2',
+          publicId: 'V2_-_Database_Driven_cksu1l',
           title: "Product Management App for LPC - Version 2",
           label: "Database-Driven",
           date: "Feb 2025",
-          posterTime: '2'
+          posterTime: '1'
         },
         {
-          publicId: 'samples/elephants',
+          publicId: 'odknbtghwrfd4wydktqm',
           title: "Product Management App for LPC - Version 1",
           label: "Where It Began",
           date: "Dec 2024",
-          posterTime: '2'
+          posterTime: '2.1'
         }
       ]
     },
